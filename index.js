@@ -1,19 +1,15 @@
 import { ethers } from "./ethers-5.6.esm.min.js"
-//import { ENS } from "ethers"
 import { abi, contractAddress } from "./constants.js"
 
 const connectButton = document.getElementById("connectButton")
 const fund = document.getElementById("fund")
 const balanceButton = document.getElementById("balanceButton")
 const withdrawButton = document.getElementById("withdrawButton")
-//const { ENS } = ethers
 
 connectButton.onclick = connect
 fund.onclick = fundFunc
 balanceButton.onclick = getBalance
 withdrawButton.onclick = withdraw
-
-//console.log(ethers)
 
 async function connect() {
     if (typeof window.ethereum !== "undefined") {
@@ -73,8 +69,6 @@ function listenForTransactionMined(transactionResponse, provider) {
         })
     })
 
-    //return new Promise()
-
     // because we need to create a listener for the blockchain
 }
 
@@ -93,6 +87,3 @@ async function withdraw() {
     }
 }
 
-//fund func
-
-//withdraw func
